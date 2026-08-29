@@ -172,5 +172,5 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 ---
 
 **Última actualización:** Agosto 2026  
-**Última rama activa:** `feature/typeScriptModulo1`  
+**Última rama activa:** `feature/typeScriptModulo3`  
 **Estado:** 🔵 En desarrollo - Sección 3 completa

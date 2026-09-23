@@ -1,4 +1,23 @@
-# 02Base
+# 02-base — Sección 4: Angular Essentials
+
+Módulo práctico del **Curso de Angular**: primer proyecto generado con Angular CLI (v19.2.27) para trabajar los fundamentos de Angular standalone — componentes, signals, computed, routing básico y pipes.
+
+## 📌 Contenido de este módulo
+
+- **`pages/counter`** — contador con propiedad clásica (`counter`) y con `signal()`, usando `.update()` para mutar el estado. Botones +1 / -1 / Reset. Componente con `ChangeDetectionStrategy.OnPush`.
+- **`pages/hero`** — uso de `signal()` y `computed()` para derivar datos (`heroDescription`, `capitalizedName`), pipe `UpperCasePipe`, botones que cambian el estado del héroe.
+- **Routing** — rutas declaradas en `app.routes.ts` (`/` → Counter, `/hero` → Hero) con `provideRouter`.
+- **Estilos** — Bootstrap 5.3 cargado por CDN en `src/index.html`.
+
+## 🧠 Conceptos cubiertos
+
+- Standalone components
+- Signals (`signal`, `computed`, `.set()`, `.update()`)
+- `ChangeDetectionStrategy.OnPush`
+- Angular Router (rutas básicas)
+- Pipes (`UpperCasePipe`)
+
+---
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
 

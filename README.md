@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado Actual:** 🔵 Sección 3 - Bases de TypeScript (21/21 lecciones completadas)
+**Estado Actual:** 🔵 Sección 4 - Angular Essentials (primer proyecto: `02-base`)
 
 ## 📂 Estructura del Proyecto
 
@@ -32,6 +32,16 @@ Angular-curse/
 │   ├── tsconfig.json
 │   ├── index.html
 │   └── pnpm-lock.yaml
+├── 02-base/                       # Sección 4 - Angular Essentials
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── app.routes.ts     # Rutas: '' -> Counter, 'hero' -> Hero
+│   │   │   └── pages/
+│   │   │       ├── counter/      # Signals básicas (signal, update)
+│   │   │       └── hero/         # computed() y pipes
+│   │   └── index.html            # Bootstrap 5.3 (CDN)
+│   ├── package.json
+│   └── README.md
 ├── .vscode/                     # Configuración de VSCode
 │   └── settings.json
 └── .gitignore
@@ -44,12 +54,12 @@ Angular-curse/
 
 - [x] **Sección 1:** Introducción a Angular
 - [x] **Sección 2:** Fundamentos de JavaScript/TypeScript
-- [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)
+- [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)  — ver `02-typescript-intro/`
+- [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — ver `02-base/`
 
 ### 🔄 Próximas Secciones
 
-- [ ] **Sección 4:** Temas Avanzados de TypeScript
-- [ ] **Sección 5:** Angular Essentials
+- [🔄] **Sección 5:** Angular Essentials
 - [ ] **Sección 6+:** Componentes, Servicios, Routing y más
 
 ### 🔧 Conceptos Implementados - Sección 3
@@ -66,6 +76,19 @@ En la Sección 3 se cubren los siguientes temas fundamentales:
 - **Genéricos:** Tipos genéricos parametrizados, constraints
 - **Decoradores:** Decoradores de clases y métodos
 - **Optional Chaining:** Navegación segura de propiedades
+
+### 🔧 Conceptos Implementados - Sección 4
+
+En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-base/`](./02-base)):
+
+- **Señales**
+- **Estado**
+- **Propiedades**
+- **Rutas**
+- **Métodos**
+- **Eventos**
+- **Cambios en el DOM**
+- **Cada archivo y directorio de un proyecto**
 
 ## 🚀 Requisitos Previos
 
@@ -171,6 +194,6 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 
 ---
 
-**Última actualización:** Agosto 2026  
-**Última rama activa:** `feature/typeScriptModulo3`  
-**Estado:** 🔵 En desarrollo - Sección 3 completa
+**Última actualización:** Septiembre 2026  
+**Última rama activa:** `feature/seccion4`  
+**Estado:** 🔵 En desarrollo - Sección 4 en progreso (`02-base`)

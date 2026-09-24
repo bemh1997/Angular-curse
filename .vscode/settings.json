@@ -30,8 +30,10 @@
 	"peacock.color": "#dd0531",
 	"cSpell.language": "en,es-ES",
 	"cSpell.words": [
+		"bazel",
 		"bemh",
 		"Bermúdez",
+		"classpath",
 		"Desestructuración",
 		"docusaurus",
 		"dotenv",
@@ -42,16 +44,21 @@
 		"istanbul",
 		"jscoverage",
 		"jspm",
+		"libpeerconnection",
 		"nuxt",
 		"Nuxt",
 		"pids",
 		"Spiderman",
 		"stylelintcache",
 		"Sveltekit",
+		"testem",
 		"tipados",
 		"Udemy",
 		"vitepress",
 		"vuepress",
 		"wscript"
+	],
+	"cSpell.ignoreWords": [
+		"Gifs"
 	]
 }

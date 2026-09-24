@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado Actual:** 🔵 Sección 4 - Angular Essentials (primer proyecto: `02-base`)
+**Estado Actual:** 🔵 Sección 5 - Angular Essentials, continuación (`03-base-continuacion`: navbar, routing y DragonBall)
 
 ## 📂 Estructura del Proyecto
 
@@ -42,6 +42,18 @@ Angular-curse/
 │   │   └── index.html            # Bootstrap 5.3 (CDN)
 │   ├── package.json
 │   └── README.md
+├── 03-base-continuacion/          # Sección 5 - navbar, routing y DragonBall
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── app.routes.ts     # + ruta 'dragonball' y wildcard '**'
+│   │   │   ├── components/shared/navbar/  # RouterLink, RouterLinkActive
+│   │   │   └── pages/
+│   │   │       ├── counter/
+│   │   │       ├── hero/
+│   │   │       └── dragonball/   # signal<Character[]>, @for, class binding
+│   │   └── index.html
+│   ├── package.json
+│   └── README.md
 ├── .vscode/                     # Configuración de VSCode
 │   └── settings.json
 └── .gitignore
@@ -60,11 +72,11 @@ Angular-curse/
 ### 🔄 Próximas Secciones
 
 - [🔄] **Sección 5:** Angular Essentials
-- [ ] **Sección 6+:** Componentes, Servicios, Routing y más
+- [ ] **Sección 6+:** GifsApp -Pensemos en componentes
 
 ### 🔧 Conceptos Implementados - Sección 3
 
-En la Sección 3 se cubren los siguientes temas fundamentales:
+En la Sección 3 se cubren los siguientes temas fundamentales(Código en [`01-typescript-intro/`](./01-typescript-intro)):
 
 - **Tipos Básicos:** `string`, `number`, `boolean`, `any`, `unknown`, `never`
 - **Objetos e Interfaces:** Definición de contratos TypeScript, tipos personalizados
@@ -89,6 +101,22 @@ En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-b
 - **Eventos**
 - **Cambios en el DOM**
 - **Cada archivo y directorio de un proyecto**
+
+### 🔧 Conceptos Implementados - Sección 5
+
+En la Sección 5 se cubren los siguientes temas fundamentales (código en [`03-base-continuacion/`](./03-base-continuacion)):
+
+- **RouterLink y RouterLink Active**
+- **Control flow**
+- **Decoradores @for y @if**
+- **ngClass - ngStyle - Alternativas**
+- **Comunicación entre componentes**
+- **Inputs / outputs (Como señales)**
+- **Servicios en Angular**
+- **Efectos y LocalStorage**
+- **LinkedSignal**
+- **HashRouter**
+- **Despliegues**
 
 ## 🚀 Requisitos Previos
 
@@ -195,5 +223,5 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 ---
 
 **Última actualización:** Septiembre 2026  
-**Última rama activa:** `feature/seccion4`  
-**Estado:** 🔵 En desarrollo - Sección 4 en progreso (`02-base`)
+**Última rama activa:** `feat/seccion5`  
+**Estado:** 🔵 En desarrollo - Sección 5 en progreso (`03-base-continuacion`)

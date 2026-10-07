@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado Actual:** 🔵 Sección 5 - Angular Essentials, continuación (`03-base-continuacion`: navbar, routing y DragonBall)
+**Estado Actual:** 🔵 Sección 5 completada - Angular Essentials, continuación (`02-base-seccion5`: navbar, routing y DragonBall). Avanzando a la Sección 6: GifsApp.
 
 ## 📂 Estructura del Proyecto
 
@@ -32,7 +32,7 @@ Angular-curse/
 │   ├── tsconfig.json
 │   ├── index.html
 │   └── pnpm-lock.yaml
-├── 02-base/                       # Sección 4 - Angular Essentials
+├── 02-base-seccion4/              # Sección 4 - Angular Essentials
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── app.routes.ts     # Rutas: '' -> Counter, 'hero' -> Hero
@@ -42,7 +42,7 @@ Angular-curse/
 │   │   └── index.html            # Bootstrap 5.3 (CDN)
 │   ├── package.json
 │   └── README.md
-├── 03-base-continuacion/          # Sección 5 - navbar, routing y DragonBall
+├── 02-base-seccion5/              # Sección 5 - navbar, routing y DragonBall
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── app.routes.ts     # + ruta 'dragonball' y wildcard '**'
@@ -66,17 +66,18 @@ Angular-curse/
 
 - [x] **Sección 1:** Introducción a Angular
 - [x] **Sección 2:** Fundamentos de JavaScript/TypeScript
-- [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)  — ver `02-typescript-intro/`
-- [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — ver `02-base/`
+- [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)  — ver `01-typescript-intro/`
+- [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — ver `02-base-seccion4/`
+- [x] **Sección 5:** Angular Essentials (navbar, routing y DragonBall) — ver `02-base-seccion5/`
 
 ### 🔄 Próximas Secciones
 
-- [🔄] **Sección 5:** Angular Essentials
-- [ ] **Sección 6+:** GifsApp -Pensemos en componentes
+- [ ] **Sección 6:** GifsApp - Pensemos en componentes
+- [ ] **Sección 7+:** Continuación del curso
 
 ### 🔧 Conceptos Implementados - Sección 3
 
-En la Sección 3 se cubren los siguientes temas fundamentales(Código en [`01-typescript-intro/`](./01-typescript-intro)):
+En la Sección 3 se cubren los siguientes temas fundamentales (código en [`01-typescript-intro/`](./01-typescript-intro)):
 
 - **Tipos Básicos:** `string`, `number`, `boolean`, `any`, `unknown`, `never`
 - **Objetos e Interfaces:** Definición de contratos TypeScript, tipos personalizados
@@ -91,7 +92,7 @@ En la Sección 3 se cubren los siguientes temas fundamentales(Código en [`01-ty
 
 ### 🔧 Conceptos Implementados - Sección 4
 
-En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-base/`](./02-base)):
+En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-base-seccion4/`](./02-base-seccion4)):
 
 - **Señales**
 - **Estado**
@@ -104,7 +105,7 @@ En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-b
 
 ### 🔧 Conceptos Implementados - Sección 5
 
-En la Sección 5 se cubren los siguientes temas fundamentales (código en [`03-base-continuacion/`](./03-base-continuacion)):
+En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-base-seccion5/`](./02-base-seccion5)):
 
 - **RouterLink y RouterLink Active**
 - **Control flow**
@@ -139,10 +140,16 @@ git clone https://github.com/bemh1997/Angular-curse.git
 cd Angular-curse
 ```
 
-### Instalar dependencias del módulo 01-typescript-intro
+### Instalar dependencias de cada módulo
 
 ```bash
 cd 01-typescript-intro
+pnpm install
+
+cd ../02-base-seccion4
+pnpm install
+
+cd ../02-base-seccion5
 pnpm install
 ```
 
@@ -222,6 +229,6 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 
 ---
 
-**Última actualización:** Septiembre 2026  
-**Última rama activa:** `feat/seccion5`  
-**Estado:** 🔵 En desarrollo - Sección 5 en progreso (`03-base-continuacion`)
+- **Última actualización:** Octubre 2026
+- **Última rama activa:** `feat/seccion5`
+- **Estado:** Sección 5 completada (`02-base-seccion5`), listo para avanzar a la Sección 6 (`GifsApp`).

@@ -1,22 +1,30 @@
 # 02-base-seccion5 — Sección 5: Angular Essentials
 
-Continuación del curso en la **Sección 5**: se agrega navegación entre páginas y una nueva vista con listas dinámicas y estilos condicionales.
+Continuación del curso en la **Sección 5**: se agregan navegación, comunicación entre componentes y gestión de personajes de DragonBall.
 
 ## 📌 Contenido de este módulo
 
-- **`components/shared/navbar`** — barra de navegación con `RouterLink` y `RouterLinkActive` (usa `exact: true` en la ruta raíz para que no quede siempre activa).
-- **`pages/counter`** y **`pages/hero`** — se mantienen igual que en `02-base`.
-- **`pages/dragonball`** (nuevo) — listado de personajes (`signal<Character[]>`), renderizado con el nuevo control de flujo `@for` (`track`, `$index`), clases condicionales con `[class.x]` según el poder del personaje, y un formulario de alta (aún sin lógica de guardado).
-- **Routing** — se agrega la ruta `dragonball` y una ruta comodín `**` que redirige a `''`.
-- **Estilos** — Bootstrap 5.3 (CDN), clases utilitarias (`row`, `col-12 col-sm-6`, `form-control`, `btn btn-primary`).
+- **Barra de navegación** — `RouterLink`, `RouterLinkActive` y activación exacta del enlace raíz.
+- **Routing** — páginas de contador, héroe, DragonBall y DragonBall Super; ruta comodín que redirige al inicio.
+- **Control flow** — `@for` con `track` y `$index`, y `@if` para mostrar contenido según el estado.
+- **Comunicación entre componentes** — inputs requeridos y outputs tipados para agregar personajes.
+- **Componentes reutilizables** — formulario de alta y lista de personajes.
+- **Estado con Signals** — señales para los campos del formulario y la colección de personajes.
+- **Servicio e inyección de dependencias** — `DragonballService` comparte y actualiza el estado.
+- **Persistencia** — efectos de Angular sincronizan los personajes con LocalStorage.
+- **Renderizado condicional** — class binding según el poder y estado vacío para la lista.
+- **Hash routing** — `HashLocationStrategy` habilita rutas con fragmento.
+- **Estilos** — Bootstrap 5.3 por CDN y clases utilitarias para el diseño.
 
 ## 🧠 Conceptos cubiertos
 
-- Componentes anidados y navegación (`app-navbar`)
-- `RouterLink`, `RouterLinkActive`, rutas comodín (`**`)
-- Signals con arreglos de objetos (`signal<Character[]>`)
-- Nuevo control de flujo `@for` con `track` e `$index`
-- Class binding condicional (`[class.nombre]`)
+- Separación de componentes y responsabilidades.
+- Signals (`signal`, `input`, `output`, `effect`) y estado compartido mediante un servicio.
+- Persistencia del estado en LocalStorage.
+- Navegación de Angular y estrategia de hash.
+- Plantillas con control flow moderno y class binding.
+
+> `LinkedSignal` y los despliegues también forman parte de los temas estudiados en la sección; este módulo describe los ejemplos implementados en el proyecto.
 
 ---
 

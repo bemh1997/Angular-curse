@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado Actual:** 🔵 Sección 5 completada - Angular Essentials, continuación (`02-base-seccion5`: navbar, routing y DragonBall). Avanzando a la Sección 6: GifsApp.
+**Estado Actual:** ✅ Sección 6 completada: estructura inicial de GifsApp (`03-gifs-app`). Siguiente: Sección 7, integración y gestión de GIFs desde una API.
 
 ## 📂 Estructura del Proyecto
 
@@ -29,10 +29,11 @@ Angular-curse/
 │   │       ├── 10-decorators.ts
 │   │       └── 11-optional-chaining.ts
 │   ├── package.json
+│   ├── README.md
 │   ├── tsconfig.json
 │   ├── index.html
 │   └── pnpm-lock.yaml
-├── 02-base-seccion4/              # Sección 4 - Angular Essentials
+├── 02-base-seccion4/             # Sección 4 - componentes, signals y routing
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── app.routes.ts     # Rutas: '' -> Counter, 'hero' -> Hero
@@ -42,7 +43,7 @@ Angular-curse/
 │   │   └── index.html            # Bootstrap 5.3 (CDN)
 │   ├── package.json
 │   └── README.md
-├── 02-base-seccion5/              # Sección 5 - navbar, routing y DragonBall
+├── 02-base-seccion5/             # Sección 5 - navegación, componentes y DragonBall
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── app.routes.ts     # + ruta 'dragonball' y wildcard '**'
@@ -54,8 +55,16 @@ Angular-curse/
 │   │   └── index.html
 │   ├── package.json
 │   └── README.md
-├── .vscode/                     # Configuración de VSCode
-│   └── settings.json
+├── 03-gifs-app/                  # Sección 6 - estructura inicial de GifsApp
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── app.routes.ts    # Rutas lazy-loaded y rutas hijas del dashboard
+│   │   │   └── gifs/
+│   │   │       ├── components/  # Menú lateral y componentes de lista de GIFs
+│   │   │       └── pages/       # Dashboard, tendencias y búsqueda
+│   │   └── environments/       # Configuración de entorno
+│   ├── package.json
+│   └── README.md
 └── .gitignore
 
 ```
@@ -69,11 +78,11 @@ Angular-curse/
 - [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)  — ver `01-typescript-intro/`
 - [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — ver `02-base-seccion4/`
 - [x] **Sección 5:** Angular Essentials (navbar, routing y DragonBall) — ver `02-base-seccion5/`
+- [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — ver `03-gifs-app/`
 
-### 🔄 Próximas Secciones
+### 🔄 Siguiente Sección
 
-- [ ] **Sección 6:** GifsApp - Pensemos en componentes
-- [ ] **Sección 7+:** Continuación del curso
+- [ ] **Sección 7:** Consumo y gestión de GIFs desde una API
 
 ### 🔧 Conceptos Implementados - Sección 3
 
@@ -90,34 +99,63 @@ En la Sección 3 se cubren los siguientes temas fundamentales (código en [`01-t
 - **Decoradores:** Decoradores de clases y métodos
 - **Optional Chaining:** Navegación segura de propiedades
 
-### 🔧 Conceptos Implementados - Sección 4
+### 🔧 Temas de la Sección 4
 
 En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-base-seccion4/`](./02-base-seccion4)):
 
-- **Señales**
-- **Estado**
-- **Propiedades**
-- **Rutas**
-- **Métodos**
-- **Eventos**
-- **Cambios en el DOM**
-- **Cada archivo y directorio de un proyecto**
+- **Componentes standalone** y estructura de una aplicación Angular
+- **Propiedades y estado** local en componentes
+- **Signals** con `signal()`, `.set()` y `.update()`
+- **Estado derivado** con `computed()`
+- **Change detection** con `ChangeDetectionStrategy.OnPush`
+- **Routing básico** con `provideRouter`, rutas y `RouterOutlet`
+- **Eventos y actualización de la vista** desde acciones del usuario
+- **Pipes** como `UpperCasePipe`
+- **Bootstrap 5.3** integrado desde CDN
 
-### 🔧 Conceptos Implementados - Sección 5
+### 🔧 Temas de la Sección 5
 
 En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-base-seccion5/`](./02-base-seccion5)):
 
-- **RouterLink y RouterLink Active**
-- **Control flow**
-- **Decoradores @for y @if**
-- **ngClass - ngStyle - Alternativas**
-- **Comunicación entre componentes**
-- **Inputs / outputs (Como señales)**
-- **Servicios en Angular**
-- **Efectos y LocalStorage**
-- **LinkedSignal**
-- **HashRouter**
-- **Despliegues**
+- **Navegación** con `RouterLink`, `RouterLinkActive` y rutas comodín
+- **Control flow** con `@for` y `@if`, seguimiento de elementos con `track`
+- **Class binding** condicional según los datos del personaje
+- **Componentes reutilizables** para agregar y mostrar personajes
+- **Comunicación entre componentes** con inputs y outputs de Angular
+- **Estado con Signals** y servicio Angular con inyección de dependencias
+- **Persistencia con LocalStorage** y efectos
+- **Hash routing** con `HashLocationStrategy`
+- **LinkedSignal** y despliegues como temas estudiados en la sección
+
+### 🔧 Conceptos Implementados - Sección 6
+
+La Sección 6 prepara las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app/`](./03-gifs-app)). Las páginas de tendencias y búsqueda son la estructura inicial; la integración real con la API se aborda en la siguiente sección.
+
+- **Lazy loading de páginas** con `loadComponent`
+- **Separación de rutas** por página y funcionalidad
+- **Rutas hijas** dentro del dashboard
+- **Router outlets anidados** para mostrar las páginas hijas
+- **Variables de entorno de Angular**
+- **Angular CLI** para generar, servir, compilar y probar la aplicación
+- **Componentes reutilizables** para el menú y las listas de GIFs
+- **Inputs como señales** (`input.required`)
+- **Comunicación entre componentes** mediante propiedades de entrada
+- **Signals** para exponer datos a la interfaz
+- **Tailwind CSS** para estilos
+- **Estructura inicial del dashboard de GifsApp**
+
+### 🔜 Temas de la Sección 7
+
+En la Sección 7 se conectará GifsApp con una API para trabajar con GIFs y profundizar en el manejo del estado:
+
+- **Rutas dinámicas**
+- **LocalStorage**
+- **Conversión de Observables a Signals**
+- **Reutilización de componentes**
+- **Peticiones HTTP**
+- **Manejo de caché**
+- **Mapeo de información** recibida desde la API
+- **Manejo del estado de la aplicación**
 
 ## 🚀 Requisitos Previos
 
@@ -129,7 +167,7 @@ En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-b
   ```
 
 - **TypeScript** >= 5.x
-- **Editor recomendado:** VSCode con extensión "TypeScript Vue Plugin"
+- **Editor recomendado:** VS Code con Angular Language Service
 
 ## 📥 Instalación
 
@@ -150,6 +188,9 @@ cd ../02-base-seccion4
 pnpm install
 
 cd ../02-base-seccion5
+pnpm install
+
+cd ../03-gifs-app
 pnpm install
 ```
 
@@ -209,8 +250,7 @@ let ciudad = "Mexico City"; // string (inferido)
 
 - Los archivos están codificados en **UTF-8**
 - Se usa **pnpm** para determinismo en dependencias
-- Configuración de **VSCode** incluida para consistencia de equipo
-- `.gitignore` excluye `node_modules`, `dist/` y archivos locales
+- `.gitignore` excluye `node_modules`, `dist/` y configuraciones locales
 
 ## 📚 Recursos Adicionales
 
@@ -230,5 +270,5 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 ---
 
 - **Última actualización:** Octubre 2026
-- **Última rama activa:** `feat/seccion5`
-- **Estado:** Sección 5 completada (`02-base-seccion5`), listo para avanzar a la Sección 6 (`GifsApp`).
+- **Rama de trabajo:** `feat/seccion5`
+- **Estado:** Sección 6 completada (`03-gifs-app`), listo para avanzar a la Sección 7.

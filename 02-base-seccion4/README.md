@@ -2,20 +2,21 @@
 
 Módulo práctico del **Curso de Angular**: proyecto generado con Angular CLI (v19.2.27) para trabajar los fundamentos de Angular standalone — componentes, signals, computed, routing básico y pipes.
 
-## 📌 Contenido de este módulo
+## 📌 Temas y ejercicios
 
-- **`pages/counter`** — contador con propiedad clásica (`counter`) y con `signal()`, usando `.update()` para mutar el estado. Botones +1 / -1 / Reset. Componente con `ChangeDetectionStrategy.OnPush`.
-- **`pages/hero`** — uso de `signal()` y `computed()` para derivar datos (`heroDescription`, `capitalizedName`), pipe `UpperCasePipe`, botones que cambian el estado del héroe.
-- **Routing** — rutas declaradas en `app.routes.ts` (`/` → Counter, `/hero` → Hero) con `provideRouter`.
-- **Estilos** — Bootstrap 5.3 cargado por CDN en `src/index.html`.
+- **Componentes standalone** y estructura de una aplicación Angular.
+- **Propiedades de componentes** y estado local usando una propiedad tradicional y `signal()`.
+- **Signals**: crear y actualizar estado con `signal()`, `.set()` y `.update()`.
+- **Estado derivado** con `computed()` para producir descripciones del héroe.
+- **Change detection** con `ChangeDetectionStrategy.OnPush`.
+- **Eventos de plantilla** para incrementar, decrementar, reiniciar y modificar valores.
+- **Angular Router**: `provideRouter`, rutas `/` y `/hero`, y `RouterOutlet`.
+- **Pipes**: transformación de texto con `UpperCasePipe`.
+- **Bootstrap 5.3** agregado por CDN para el diseño.
 
-## 🧠 Conceptos cubiertos
+## 🧠 Resumen práctico
 
-- Standalone components
-- Signals (`signal`, `computed`, `.set()`, `.update()`)
-- `ChangeDetectionStrategy.OnPush`
-- Angular Router (rutas básicas)
-- Pipes (`UpperCasePipe`)
+El módulo contiene dos páginas: un contador para practicar estado y eventos, y una página de héroe para trabajar signals, valores derivados y pipes.
 
 ---
 

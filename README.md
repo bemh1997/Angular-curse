@@ -129,7 +129,7 @@ En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-b
 
 ### 🔧 Conceptos Implementados - Sección 6
 
-La Sección 6 prepara las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app/`](./03-gifs-app)). Las páginas de tendencias y búsqueda son la estructura inicial; la integración real con la API se aborda en la siguiente sección.
+La Sección 6 prepara las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6)). Las páginas de tendencias y búsqueda son la estructura inicial; la integración real con la API se aborda en la siguiente sección.
 
 - **Lazy loading de páginas** con `loadComponent`
 - **Separación de rutas** por página y funcionalidad

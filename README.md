@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado actual:** Secciones 6 y 7 completadas. La Sección 8 es opcional y profundiza en scroll, diseño masonry y depuración.
+**Estado actual:** Secciones 6, 7 y 8 completadas. La Sección 8 es opcional y recomendada para profundizar en Angular. Siguiente: Sección 9, una nueva aplicación para practicar routing y componentes.
 
 ## 📂 Estructura del Proyecto
 
@@ -14,11 +14,11 @@ Este repositorio es una guía completa para aprender Angular desde cero, comenza
 Angular-curse/
 ├── 01-typescript-intro/          # Fundamentos de TypeScript
 ├── 02-base-seccion{4,5}/         # Angular Essentials, una versión por sección
-├── 03-gifs-app-seccion{6,7}/     # GifsApp, una versión por sección
+├── 03-gifs-app-seccion{6,7,8}/   # GifsApp, una versión por sección
 └── .gitignore
 ```
 
-`{4,5}` y `{6,7}` representan carpetas separadas del mismo proyecto en distintas etapas; la Sección 8 continuará GifsApp desde la versión 7. Cada etapa incluye su propio código y configuración.
+`{4,5}` y `{6,7,8}` representan carpetas separadas del mismo proyecto en distintas etapas. Las secciones 6 a 8 muestran la evolución de GifsApp; cada etapa conserva su propio código y configuración para identificar lo aprendido.
 
 ## 📚 Progreso del Curso
 
@@ -31,9 +31,10 @@ Angular-curse/
 - [x] **Sección 5:** Angular Essentials (navbar, routing y DragonBall) — ver `02-base-seccion5/`
 - [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — ver [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6/)
 - [x] **Sección 7:** Consumo y gestión de GIFs desde una API — ver [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7/)
+- [x] **Sección 8 (opcional):** GifsApp intermedio/avanzado — ver [`03-gifs-app-seccion8/`](./03-gifs-app-seccion8/)
 
 ### 🔄 Siguiente Sección
-- [ ] **Sección 8 (opcional):** GifsApp intermedio/avanzado; continuar desde la versión de la sección 7.
+- [ ] **Sección 9:** Routing por features y construcción de la aplicación que se hará funcionar en las siguientes etapas.
 
 ### 🔧 Conceptos Implementados - Sección 3
 
@@ -107,14 +108,25 @@ La Sección 7 completa GifsApp conectándola con la API de Giphy para mostrar te
 - **Persistencia del historial** de búsquedas en LocalStorage
 - **Configuración de la clave de Giphy** mediante `.env` local, sin subirla al repositorio
 
-### 🚧 Sección 8
+### 🔧 Conceptos Implementados - Sección 8 (opcional)
 
-Esta sección es opcional, pero recomendada para quienes quieran profundizar un poco más en Angular. Puntualmente veremos:
+Esta sección profundiza en la experiencia de GifsApp (código en [`03-gifs-app-seccion8/`](./03-gifs-app-seccion8)):
 
-- **Preservar el estado del scroll**
-- **Hacer scroll infinito**
-- **Diseño masonry**
-- **Técnicas y herramientas para depurar**
+- **Preservación del scroll** al salir y regresar a tendencias
+- **Carga incremental** de GIFs al acercarse al final de la lista
+- **Diseño tipo masonry** organizando los GIFs en columnas
+- **Depuración** con `debugger` y las herramientas de desarrollo del navegador
+
+### 🚧 Sección 9
+
+En esta sección aprenderemos y reforzaremos los siguientes temas. El objetivo es armar la aplicación que luego haremos funcionar:
+
+- **Rutas hijas**
+- **Rutas anidadas**
+- **Creación y comunicación entre componentes**
+- **Tailwind CSS y DaisyUI**
+- **Archivo de rutas por feature o módulo**
+- **Carga perezosa de módulos de rutas**
 
 ## 🚀 Requisitos Previos
 
@@ -154,11 +166,14 @@ pnpm install
 
 cd ../03-gifs-app-seccion7
 pnpm install
+
+cd ../03-gifs-app-seccion8
+pnpm install
 ```
 
-Las carpetas `03-gifs-app-seccion6/` y `03-gifs-app-seccion7/` son etapas distintas del mismo proyecto; instala dependencias únicamente en la versión que quieras ejecutar.
+Las carpetas `03-gifs-app-seccion6/`, `03-gifs-app-seccion7/` y `03-gifs-app-seccion8/` son etapas distintas del mismo proyecto; instala dependencias únicamente en la versión que quieras ejecutar.
 
-Para ejecutar GifsApp, configura `GIPHY_API_KEY` en `03-gifs-app-seccion7/.env` siguiendo la plantilla `03-gifs-app-seccion7/.env.example`.
+Para ejecutar GifsApp, configura `GIPHY_API_KEY` en el archivo `.env` de la sección que quieras correr, usando su `.env.example` como plantilla.
 
 ## 🛠️ Cómo Usar
 

@@ -12,60 +12,13 @@ Este repositorio es una guía completa para aprender Angular desde cero, comenza
 
 ```bash
 Angular-curse/
-├── 01-typescript-intro/          # Módulo introductorio de TypeScript
-│   ├── src/
-│   │   ├── main.ts              # Punto de entrada
-│   │   ├── style.css            # Estilos
-│   │   └── topics/              # Temas cubiertos
-│   │       ├── 01-basic-types.ts
-│   │       ├── 02-object-interface.ts
-│   │       ├── 03-functions.ts
-│   │       ├── 04-homework-types.ts
-│   │       ├── 05-basic-destructuring.ts
-│   │       ├── 06-function-destructuring.ts
-│   │       ├── 07-imports-exports.ts
-│   │       ├── 08-classes.ts
-│   │       ├── 09-generics.ts
-│   │       ├── 10-decorators.ts
-│   │       └── 11-optional-chaining.ts
-│   ├── package.json
-│   ├── README.md
-│   ├── tsconfig.json
-│   ├── index.html
-│   └── pnpm-lock.yaml
-├── 02-base-seccion4/             # Angular Essentials: Counter, Hero y fundamentos
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── app.routes.ts     # Rutas: '' -> Counter, 'hero' -> Hero
-│   │   │   └── pages/
-│   │   │       ├── counter/      # Signals básicas (signal, update)
-│   │   │       └── hero/         # computed() y pipes
-│   │   └── index.html            # Bootstrap 5.3 (CDN)
-│   ├── package.json
-│   └── README.md
-├── 02-base-seccion5/             # El mismo proyecto: navegación, navbar y DragonBall
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── app.routes.ts     # + ruta 'dragonball' y wildcard '**'
-│   │   │   ├── components/shared/navbar/  # RouterLink, RouterLinkActive
-│   │   │   └── pages/
-│   │   │       ├── counter/
-│   │   │       ├── hero/
-│   │   │       └── dragonball/   # signal<Character[]>, @for, class binding
-│   │   └── index.html
-│   ├── package.json
-│   └── README.md
-├── 03-gifs-app-seccion6/          # GifsApp: estructura inicial y dashboard
-├── 03-gifs-app-seccion7/          # El mismo GifsApp: API de Giphy, búsqueda e historial
-├── 03-gifs-app-seccion8/          # Próxima etapa; se creará al iniciar la sección 8
+├── 01-typescript-intro/          # Fundamentos de TypeScript
+├── 02-base-seccion{4,5}/         # Angular Essentials, una versión por sección
+├── 03-gifs-app-seccion{6,7}/     # GifsApp, una versión por sección
 └── .gitignore
 ```
 
-Las carpetas `02-base-seccion4/` y `02-base-seccion5/` son **versiones por etapa del mismo proyecto Angular Essentials**; la sección 5 continúa la aplicación de la sección 4 con navegación, navbar y DragonBall. Se mantienen separadas para poder comparar qué conceptos y cambios se incorporaron.
-
-Del mismo modo, las carpetas de GifsApp son **versiones por etapa del mismo proyecto**, no aplicaciones distintas. Se mantienen separadas para comparar la estructura inicial de la sección 6 con la integración de API e historial de la sección 7. La sección 8 continuará desde la versión de la sección 7.
-
-En cada versión encontrarás la misma estructura base: `src/app/` para rutas, páginas y componentes; `src/environments/` para la configuración; además de `package.json` y el README de esa etapa.
+`{4,5}` y `{6,7}` representan carpetas separadas del mismo proyecto en distintas etapas; la Sección 8 continuará GifsApp desde la versión 7. Cada etapa incluye su propio código y configuración.
 
 ## 📚 Progreso del Curso
 

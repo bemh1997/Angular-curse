@@ -26,6 +26,16 @@ Proyecto Angular que conecta el dashboard de GifsApp con la API de Giphy para co
 
 > Para ejecutar la aplicación, configura tu propia clave de API de Giphy en los archivos de entorno. No guardes claves personales en el repositorio.
 
+## Configuración de la API
+
+Usa `.env.example` como plantilla para crear `.env` en la raíz de este proyecto, junto a `package.json`, y reemplaza el valor por tu clave de Giphy:
+
+```env
+GIPHY_API_KEY=YOUR_GIPHY_API_KEY
+```
+
+Al ejecutar `pnpm start`, `pnpm build`, `pnpm test` o `pnpm watch`, se genera automáticamente el archivo TypeScript de configuración que consume Angular. `.env` y el archivo generado están excluidos de Git. Cambia `YOUR_GIPHY_API_KEY` por una clave válida para consultar Giphy. No uses una clave de producción sensible aquí: al ser una aplicación de navegador, la clave se incluye en el bundle y puede verse desde el cliente.
+
 ## Desarrollo
 
 Requiere Node.js y pnpm. Desde esta carpeta:

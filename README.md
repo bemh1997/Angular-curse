@@ -146,18 +146,24 @@ La Sección 6 preparó las bases de un dashboard administrativo para GifsApp, co
 
 ### 🔧 Conceptos Implementados - Sección 7
 
-La Sección 7 conecta GifsApp con Giphy para consultar y buscar GIFs (código en [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7)).
+La Sección 7 completa GifsApp conectándola con la API de Giphy para mostrar tendencias, buscar GIFs y conservar el historial (código en [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7)).
 
-- **Peticiones HTTP** para tendencias y búsqueda de GIFs
-- **Tipado y mapeo** de las respuestas de Giphy a un modelo de la aplicación
-- **Signals** para el estado de tendencias, carga e historial
-- **Búsqueda de GIFs** y reutilización de componentes de lista
-- **Rutas dinámicas** para consultar el historial por término
-- **Persistencia del historial** en LocalStorage
+- **Peticiones HTTP** con `HttpClient` para tendencias y búsqueda de GIFs
+- **Interfaces y mapeo** de respuestas de Giphy al modelo de GIF de la aplicación
+- **Estado reactivo** con Signals para tendencias, carga e historial
+- **Búsqueda y consulta de historial** con componentes reutilizables
+- **Rutas dinámicas** y lectura de parámetros de ruta con `toSignal`
+- **Persistencia del historial** de búsquedas en LocalStorage
+- **Configuración de la clave de Giphy** mediante `.env` local, sin subirla al repositorio
 
 ### 🚧 Sección 8
 
-La Sección 7 está completada y la Sección 8 está por comenzar. Los temas se documentarán conforme avance su implementación.
+Esta sección es opcional, pero recomendada para quienes quieran profundizar un poco más en Angular. Puntualmente veremos:
+
+- **Preservar el estado del scroll**
+- **Hacer scroll infinito**
+- **Diseño masonry**
+- **Técnicas y herramientas para depurar**
 
 ## 🚀 Requisitos Previos
 
@@ -198,6 +204,8 @@ pnpm install
 cd ../03-gifs-app-seccion7
 pnpm install
 ```
+
+Para ejecutar GifsApp, configura `GIPHY_API_KEY` en `03-gifs-app-seccion7/.env` siguiendo la plantilla `03-gifs-app-seccion7/.env.example`.
 
 ## 🛠️ Cómo Usar
 

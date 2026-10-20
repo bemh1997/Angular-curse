@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado Actual:** ✅ Sección 6 completada: estructura inicial de GifsApp (`03-gifs-app`). Siguiente: Sección 7, integración y gestión de GIFs desde una API.
+**Estado actual:** Secciones 6 y 7 completadas. La Sección 8 es opcional y profundiza en scroll, diseño masonry y depuración.
 
 ## 📂 Estructura del Proyecto
 
@@ -55,19 +55,15 @@ Angular-curse/
 │   │   └── index.html
 │   ├── package.json
 │   └── README.md
-├── 03-gifs-app/                  # Sección 6 - estructura inicial de GifsApp
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── app.routes.ts    # Rutas lazy-loaded y rutas hijas del dashboard
-│   │   │   └── gifs/
-│   │   │       ├── components/  # Menú lateral y componentes de lista de GIFs
-│   │   │       └── pages/       # Dashboard, tendencias y búsqueda
-│   │   └── environments/       # Configuración de entorno
-│   ├── package.json
-│   └── README.md
+├── 03-gifs-app-seccion6/          # GifsApp: estructura inicial y dashboard
+├── 03-gifs-app-seccion7/          # El mismo GifsApp: API de Giphy, búsqueda e historial
+├── 03-gifs-app-seccion8/          # Próxima etapa; se creará al iniciar la sección 8
 └── .gitignore
-
 ```
+
+Las carpetas de GifsApp son **versiones por etapa del mismo proyecto**, no tres aplicaciones distintas. Se mantienen separadas para poder comparar qué conceptos y cambios se incorporaron en cada sección. La sección 8 continuará desde la versión de la sección 7.
+
+En cada versión encontrarás la misma estructura base: `src/app/` para rutas, páginas y componentes; `src/environments/` para la configuración; además de `package.json` y el README de esa etapa.
 
 ## 📚 Progreso del Curso
 
@@ -78,11 +74,11 @@ Angular-curse/
 - [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)  — ver `01-typescript-intro/`
 - [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — ver `02-base-seccion4/`
 - [x] **Sección 5:** Angular Essentials (navbar, routing y DragonBall) — ver `02-base-seccion5/`
-- [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — ver `03-gifs-app/`
+- [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — ver [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6/)
+- [x] **Sección 7:** Consumo y gestión de GIFs desde una API — ver [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7/)
 
 ### 🔄 Siguiente Sección
-
-- [ ] **Sección 7:** Consumo y gestión de GIFs desde una API
+- [ ] **Sección 8 (opcional):** GifsApp intermedio/avanzado; continuar desde la versión de la sección 7.
 
 ### 🔧 Conceptos Implementados - Sección 3
 
@@ -204,6 +200,8 @@ pnpm install
 cd ../03-gifs-app-seccion7
 pnpm install
 ```
+
+Las carpetas `03-gifs-app-seccion6/` y `03-gifs-app-seccion7/` son etapas distintas del mismo proyecto; instala dependencias únicamente en la versión que quieras ejecutar.
 
 Para ejecutar GifsApp, configura `GIPHY_API_KEY` en `03-gifs-app-seccion7/.env` siguiendo la plantilla `03-gifs-app-seccion7/.env.example`.
 

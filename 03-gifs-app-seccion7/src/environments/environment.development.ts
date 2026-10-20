@@ -1,3 +1,5 @@
+import { giphyApiKey } from './giphy-api-key';
+
 export const environment = {
 	production: true,
 	companyName: 'Gifs',
@@ -5,7 +7,7 @@ export const environment = {
 	companySlogan: 'Maneja tus gifs',
 
 	//ApiKeys
-	giphyApiKey: 'YOUR_GIPHY_API_KEY',
+	giphyApiKey,
 
 	//URLS
 	giphyUrl: 'https://api.giphy.com/v1'

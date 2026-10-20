@@ -33,7 +33,7 @@ Angular-curse/
 │   ├── tsconfig.json
 │   ├── index.html
 │   └── pnpm-lock.yaml
-├── 02-base-seccion4/             # Sección 4 - componentes, signals y routing
+├── 02-base-seccion4/             # Angular Essentials: Counter, Hero y fundamentos
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── app.routes.ts     # Rutas: '' -> Counter, 'hero' -> Hero
@@ -43,7 +43,7 @@ Angular-curse/
 │   │   └── index.html            # Bootstrap 5.3 (CDN)
 │   ├── package.json
 │   └── README.md
-├── 02-base-seccion5/             # Sección 5 - navegación, componentes y DragonBall
+├── 02-base-seccion5/             # El mismo proyecto: navegación, navbar y DragonBall
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── app.routes.ts     # + ruta 'dragonball' y wildcard '**'
@@ -61,7 +61,9 @@ Angular-curse/
 └── .gitignore
 ```
 
-Las carpetas de GifsApp son **versiones por etapa del mismo proyecto**, no tres aplicaciones distintas. Se mantienen separadas para poder comparar qué conceptos y cambios se incorporaron en cada sección. La sección 8 continuará desde la versión de la sección 7.
+Las carpetas `02-base-seccion4/` y `02-base-seccion5/` son **versiones por etapa del mismo proyecto Angular Essentials**; la sección 5 continúa la aplicación de la sección 4 con navegación, navbar y DragonBall. Se mantienen separadas para poder comparar qué conceptos y cambios se incorporaron.
+
+Del mismo modo, las carpetas de GifsApp son **versiones por etapa del mismo proyecto**, no aplicaciones distintas. Se mantienen separadas para comparar la estructura inicial de la sección 6 con la integración de API e historial de la sección 7. La sección 8 continuará desde la versión de la sección 7.
 
 En cada versión encontrarás la misma estructura base: `src/app/` para rutas, páginas y componentes; `src/environments/` para la configuración; además de `package.json` y el README de esa etapa.
 

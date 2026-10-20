@@ -129,7 +129,7 @@ En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-b
 
 ### 🔧 Conceptos Implementados - Sección 6
 
-La Sección 6 prepara las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6)). Las páginas de tendencias y búsqueda son la estructura inicial; la integración real con la API se aborda en la siguiente sección.
+La Sección 6 preparó las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6)). Las páginas de tendencias y búsqueda son la estructura inicial; la integración con la API se implementó en la Sección 7.
 
 - **Lazy loading de páginas** con `loadComponent`
 - **Separación de rutas** por página y funcionalidad
@@ -144,18 +144,20 @@ La Sección 6 prepara las bases de un dashboard administrativo para GifsApp, con
 - **Tailwind CSS** para estilos
 - **Estructura inicial del dashboard de GifsApp**
 
-### 🔜 Temas de la Sección 7
+### 🔧 Conceptos Implementados - Sección 7
 
-En la Sección 7 se conectará GifsApp con una API para trabajar con GIFs y profundizar en el manejo del estado:
+La Sección 7 conecta GifsApp con Giphy para consultar y buscar GIFs (código en [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7)).
 
-- **Rutas dinámicas**
-- **LocalStorage**
-- **Conversión de Observables a Signals**
-- **Reutilización de componentes**
-- **Peticiones HTTP**
-- **Manejo de caché**
-- **Mapeo de información** recibida desde la API
-- **Manejo del estado de la aplicación**
+- **Peticiones HTTP** para tendencias y búsqueda de GIFs
+- **Tipado y mapeo** de las respuestas de Giphy a un modelo de la aplicación
+- **Signals** para el estado de tendencias, carga e historial
+- **Búsqueda de GIFs** y reutilización de componentes de lista
+- **Rutas dinámicas** para consultar el historial por término
+- **Persistencia del historial** en LocalStorage
+
+### 🚧 Sección 8
+
+La Sección 7 está completada y la Sección 8 está por comenzar. Los temas se documentarán conforme avance su implementación.
 
 ## 🚀 Requisitos Previos
 
@@ -190,7 +192,10 @@ pnpm install
 cd ../02-base-seccion5
 pnpm install
 
-cd ../03-gifs-app
+cd ../03-gifs-app-seccion6
+pnpm install
+
+cd ../03-gifs-app-seccion7
 pnpm install
 ```
 
@@ -225,7 +230,7 @@ Cada archivo en `src/topics/` contiene:
 ```typescript
 // Tipos básicos en TypeScript
 let nombre: string = "Humberto";
-let edad: number = 27;
+let edad: number = 29;
 let activo: boolean = true;
 
 // Tipos por inferencia
@@ -270,5 +275,4 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 ---
 
 - **Última actualización:** Octubre 2026
-- **Rama de trabajo:** `feat/seccion5`
-- **Estado:** Sección 6 completada (`03-gifs-app`), listo para avanzar a la Sección 7.
+- **Estado:** Secciones 6 y 7 completadas; Sección 8 en preparación.

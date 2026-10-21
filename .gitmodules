@@ -1,0 +1,12 @@
+[submodule "02-base"]
+	path = 02-base
+	url = https://github.com/bemh1997/base-app.git
+	branch = master
+[submodule "03-gifs-app"]
+	path = 03-gifs-app
+	url = https://github.com/bemh1997/gifs-app.git
+	branch = master
+[submodule "04-country-app"]
+	path = 04-country-app
+	url = https://github.com/bemh1997/country-app.git
+	branch = master

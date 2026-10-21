@@ -6,19 +6,28 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado actual:** Secciones 6, 7 y 8 completadas. La Sección 8 es opcional y recomendada para profundizar en Angular. Siguiente: Sección 9, una nueva aplicación para practicar routing y componentes.
+**Estado actual:** Las secciones 4 a 8 están organizadas como ramas de sus aplicaciones. La aplicación de la Sección 9 está en desarrollo.
 
 ## 📂 Estructura del Proyecto
 
 ```bash
 Angular-curse/
 ├── 01-typescript-intro/          # Fundamentos de TypeScript
-├── 02-base-seccion{4,5}/         # Angular Essentials, una versión por sección
-├── 03-gifs-app-seccion{6,7,8}/   # GifsApp, una versión por sección
+├── 02-base/                      # Submódulo: Angular Essentials
+├── 03-gifs-app/                  # Submódulo: GifsApp
+├── 04-country-app/               # Submódulo: CountryApp
 └── .gitignore
 ```
 
-`{4,5}` y `{6,7,8}` representan carpetas separadas del mismo proyecto en distintas etapas. Las secciones 6 a 8 muestran la evolución de GifsApp; cada etapa conserva su propio código y configuración para identificar lo aprendido.
+Las aplicaciones Angular viven en repositorios independientes y se incluyen aquí como submódulos. Cada sección tiene una rama propia y `master` apunta a la versión final más reciente de la aplicación:
+
+| Submódulo | Repositorio | Ramas de sección | `master` |
+| --- | --- | --- | --- |
+| [`02-base/`](./02-base/) | [base-app](https://github.com/bemh1997/base-app) | `seccion4`, `seccion5` | Sección 5 |
+| [`03-gifs-app/`](./03-gifs-app/) | [gifs-app](https://github.com/bemh1997/gifs-app) | `seccion6`, `seccion7`, `seccion8` | Sección 8 |
+| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9` | Sección 9 |
+
+Para trabajar con una etapa anterior, cambia a su rama dentro del submódulo correspondiente. La carpeta `01-typescript-intro/` permanece independiente y no forma parte de estos submódulos.
 
 ## 📚 Progreso del Curso
 
@@ -27,11 +36,11 @@ Angular-curse/
 - [x] **Sección 1:** Introducción a Angular
 - [x] **Sección 2:** Fundamentos de JavaScript/TypeScript
 - [x] **Sección 3:** Bases de TypeScript - Recomendado (21/21 lecciones | 2h 27 min)  — ver `01-typescript-intro/`
-- [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — ver `02-base-seccion4/`
-- [x] **Sección 5:** Angular Essentials (navbar, routing y DragonBall) — ver `02-base-seccion5/`
-- [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — ver [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6/)
-- [x] **Sección 7:** Consumo y gestión de GIFs desde una API — ver [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7/)
-- [x] **Sección 8 (opcional):** GifsApp intermedio/avanzado — ver [`03-gifs-app-seccion8/`](./03-gifs-app-seccion8/)
+- [x] **Sección 4:** Angular Essentials (Componentes, Signals, Routing) — rama [`seccion4`](https://github.com/bemh1997/base-app/tree/seccion4) de [`02-base/`](./02-base/)
+- [x] **Sección 5:** Angular Essentials (navbar, routing y DragonBall) — rama [`seccion5`](https://github.com/bemh1997/base-app/tree/seccion5) de [`02-base/`](./02-base/)
+- [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — rama [`seccion6`](https://github.com/bemh1997/gifs-app/tree/seccion6) de [`03-gifs-app/`](./03-gifs-app/)
+- [x] **Sección 7:** Consumo y gestión de GIFs desde una API — rama [`seccion7`](https://github.com/bemh1997/gifs-app/tree/seccion7) de [`03-gifs-app/`](./03-gifs-app/)
+- [x] **Sección 8 (opcional):** GifsApp intermedio/avanzado — rama [`seccion8`](https://github.com/bemh1997/gifs-app/tree/seccion8) de [`03-gifs-app/`](./03-gifs-app/)
 
 ### 🔄 Siguiente Sección
 - [ ] **Sección 9:** Routing por features y construcción de la aplicación que se hará funcionar en las siguientes etapas.
@@ -53,7 +62,7 @@ En la Sección 3 se cubren los siguientes temas fundamentales (código en [`01-t
 
 ### 🔧 Temas de la Sección 4
 
-En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-base-seccion4/`](./02-base-seccion4)):
+En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-base/`](./02-base/), rama `seccion4`):
 
 - **Componentes standalone** y estructura de una aplicación Angular
 - **Propiedades y estado** local en componentes
@@ -67,7 +76,7 @@ En la Sección 4 se cubren los siguientes temas fundamentales (código en [`02-b
 
 ### 🔧 Temas de la Sección 5
 
-En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-base-seccion5/`](./02-base-seccion5)):
+En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-base/`](./02-base/), rama `seccion5`):
 
 - **Navegación** con `RouterLink`, `RouterLinkActive` y rutas comodín
 - **Control flow** con `@for` y `@if`, seguimiento de elementos con `track`
@@ -81,7 +90,7 @@ En la Sección 5 se cubren los siguientes temas fundamentales (código en [`02-b
 
 ### 🔧 Conceptos Implementados - Sección 6
 
-La Sección 6 preparó las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app-seccion6/`](./03-gifs-app-seccion6)). Las páginas de tendencias y búsqueda son la estructura inicial; la integración con la API se implementó en la Sección 7.
+La Sección 6 preparó las bases de un dashboard administrativo para GifsApp, con rutas y componentes organizados (código en [`03-gifs-app/`](./03-gifs-app/), rama `seccion6`). Las páginas de tendencias y búsqueda son la estructura inicial; la integración con la API se implementó en la Sección 7.
 
 - **Lazy loading de páginas** con `loadComponent`
 - **Separación de rutas** por página y funcionalidad
@@ -98,7 +107,7 @@ La Sección 6 preparó las bases de un dashboard administrativo para GifsApp, co
 
 ### 🔧 Conceptos Implementados - Sección 7
 
-La Sección 7 completa GifsApp conectándola con la API de Giphy para mostrar tendencias, buscar GIFs y conservar el historial (código en [`03-gifs-app-seccion7/`](./03-gifs-app-seccion7)).
+La Sección 7 completa GifsApp conectándola con la API de Giphy para mostrar tendencias, buscar GIFs y conservar el historial (código en [`03-gifs-app/`](./03-gifs-app/), rama `seccion7`).
 
 - **Peticiones HTTP** con `HttpClient` para tendencias y búsqueda de GIFs
 - **Interfaces y mapeo** de respuestas de Giphy al modelo de GIF de la aplicación
@@ -110,7 +119,7 @@ La Sección 7 completa GifsApp conectándola con la API de Giphy para mostrar te
 
 ### 🔧 Conceptos Implementados - Sección 8 (opcional)
 
-Esta sección profundiza en la experiencia de GifsApp (código en [`03-gifs-app-seccion8/`](./03-gifs-app-seccion8)):
+Esta sección profundiza en la experiencia de GifsApp (código en [`03-gifs-app/`](./03-gifs-app/), rama `seccion8`):
 
 - **Preservación del scroll** al salir y regresar a tendencias
 - **Carga incremental** de GIFs al acercarse al final de la lista
@@ -142,11 +151,17 @@ En esta sección aprenderemos y reforzaremos los siguientes temas. El objetivo e
 
 ## 📥 Instalación
 
-### Clonar el repositorio
+### Clonar el repositorio y sus submódulos
 
 ```bash
-git clone https://github.com/bemh1997/Angular-curse.git
+git clone --recurse-submodules https://github.com/bemh1997/Angular-curse.git
 cd Angular-curse
+```
+
+Si ya clonaste el repositorio sin `--recurse-submodules`, inicializa las aplicaciones con:
+
+```bash
+git submodule update --init --recursive
 ```
 
 ### Instalar dependencias de cada módulo
@@ -155,25 +170,19 @@ cd Angular-curse
 cd 01-typescript-intro
 pnpm install
 
-cd ../02-base-seccion4
+cd ../02-base
 pnpm install
 
-cd ../02-base-seccion5
+cd ../03-gifs-app
 pnpm install
 
-cd ../03-gifs-app-seccion6
-pnpm install
-
-cd ../03-gifs-app-seccion7
-pnpm install
-
-cd ../03-gifs-app-seccion8
+cd ../04-country-app
 pnpm install
 ```
 
-Las carpetas `03-gifs-app-seccion6/`, `03-gifs-app-seccion7/` y `03-gifs-app-seccion8/` son etapas distintas del mismo proyecto; instala dependencias únicamente en la versión que quieras ejecutar.
+Las ramas de sección son distintas etapas de la misma aplicación. Para revisar una rama anterior, cámbiala dentro del submódulo, por ejemplo: `git -C 03-gifs-app switch seccion7`. Para volver a la versión final, usa `git -C 03-gifs-app switch master`.
 
-Para ejecutar GifsApp, configura `GIPHY_API_KEY` en el archivo `.env` de la sección que quieras correr, usando su `.env.example` como plantilla.
+Para ejecutar GifsApp, configura `GIPHY_API_KEY` en el archivo `.env` de `03-gifs-app/`, usando `.env.example` como plantilla.
 
 ## 🛠️ Cómo Usar
 
@@ -251,4 +260,4 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 ---
 
 - **Última actualización:** Octubre 2026
-- **Estado:** Secciones 6 y 7 completadas; Sección 8 en preparación.
+- **Estado:** Secciones 4 a 8 disponibles en sus ramas; Sección 9 en desarrollo.

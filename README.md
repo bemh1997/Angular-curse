@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado actual:** Las secciones 4 a 8 están organizadas como ramas de sus aplicaciones. La aplicación de la Sección 9 está en desarrollo.
+**Estado actual:** Las secciones 4 a 9 están completadas y organizadas como ramas en sus aplicaciones. La Sección 10 continúa CountryApp para conectarla con datos y completar su funcionamiento.
 
 ## 📂 Estructura del Proyecto
 
@@ -25,9 +25,29 @@ Las aplicaciones Angular viven en repositorios independientes y se incluyen aqu�
 | --- | --- | --- | --- |
 | [`02-base/`](./02-base/) | [base-app](https://github.com/bemh1997/base-app) | `seccion4`, `seccion5` | Sección 5 |
 | [`03-gifs-app/`](./03-gifs-app/) | [gifs-app](https://github.com/bemh1997/gifs-app) | `seccion6`, `seccion7`, `seccion8` | Sección 8 |
-| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9` | Sección 9 |
+| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9`, `seccion10` | Sección 9 |
 
 Para trabajar con una etapa anterior, cambia a su rama dentro del submódulo correspondiente. La carpeta `01-typescript-intro/` permanece independiente y no forma parte de estos submódulos.
+
+### ¿Qué es un submódulo?
+
+Un submódulo es otro repositorio Git incluido dentro de este proyecto. Por eso, `04-country-app/` tiene su propio historial y ramas; el repositorio del curso guarda un enlace a un commit concreto de CountryApp, no una copia de todos sus archivos. Esto permite trabajar y publicar cada aplicación por separado.
+
+Al clonar el curso por primera vez, descarga también los submódulos:
+
+```bash
+git clone --recurse-submodules https://github.com/bemh1997/Angular-curse.git
+```
+
+Si ya tienes el curso clonado, puedes inicializarlos con `git submodule update --init --recursive`.
+
+Para empezar la Sección 10:
+
+```bash
+git -C 04-country-app switch seccion10
+```
+
+Los cambios de la aplicación se confirman y se suben desde `04-country-app/`. Después se confirma en el repositorio del curso el nuevo enlace al commit del submódulo.
 
 ## 📚 Progreso del Curso
 
@@ -41,9 +61,10 @@ Para trabajar con una etapa anterior, cambia a su rama dentro del submódulo cor
 - [x] **Sección 6:** GifsApp: estructura y fundamentos del dashboard — rama [`seccion6`](https://github.com/bemh1997/gifs-app/tree/seccion6) de [`03-gifs-app/`](./03-gifs-app/)
 - [x] **Sección 7:** Consumo y gestión de GIFs desde una API — rama [`seccion7`](https://github.com/bemh1997/gifs-app/tree/seccion7) de [`03-gifs-app/`](./03-gifs-app/)
 - [x] **Sección 8 (opcional):** GifsApp intermedio/avanzado — rama [`seccion8`](https://github.com/bemh1997/gifs-app/tree/seccion8) de [`03-gifs-app/`](./03-gifs-app/)
+- [x] **Sección 9:** Estructura de CountryApp con routing por funcionalidades — rama [`seccion9`](https://github.com/bemh1997/country-app/tree/seccion9) de [`04-country-app/`](./04-country-app/)
 
 ### 🔄 Siguiente Sección
-- [ ] **Sección 9:** Routing por features y construcción de la aplicación que se hará funcionar en las siguientes etapas.
+- [ ] **Sección 10:** Hacer funcionar CountryApp consultando datos con los recursos y servicios de Angular.
 
 ### 🔧 Conceptos Implementados - Sección 3
 
@@ -126,9 +147,9 @@ Esta sección profundiza en la experiencia de GifsApp (código en [`03-gifs-app/
 - **Diseño tipo masonry** organizando los GIFs en columnas
 - **Depuración** con `debugger` y las herramientas de desarrollo del navegador
 
-### 🚧 Sección 9
+### 🔧 Conceptos implementados - Sección 9
 
-En esta sección aprenderemos y reforzaremos los siguientes temas. El objetivo es armar la aplicación que luego haremos funcionar:
+La Sección 9 prepara CountryApp con la navegación y la estructura visual que se completará en la Sección 10 (código en [`04-country-app/`](./04-country-app/), rama `seccion9`):
 
 - **Rutas hijas**
 - **Rutas anidadas**
@@ -136,6 +157,17 @@ En esta sección aprenderemos y reforzaremos los siguientes temas. El objetivo e
 - **Tailwind CSS y DaisyUI**
 - **Archivo de rutas por feature o módulo**
 - **Carga perezosa de módulos de rutas**
+
+### 🚧 Sección 10
+
+El objetivo es conectar CountryApp con datos y hacer funcionar la aplicación. Se trabajará con:
+
+- **Resources** y **`rxResource`**
+- **Signals** y servicios
+- **Reutilización de componentes**
+- **Peticiones HTTP**
+- **Operadores de RxJS**
+- Otros conceptos necesarios para completar la aplicación
 
 ## 🚀 Requisitos Previos
 

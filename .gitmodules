@@ -9,4 +9,8 @@
 [submodule "04-country-app"]
 	path = 04-country-app
 	url = https://github.com/bemh1997/country-app.git
-	branch = seccion10
+	branch = seccion11
+[submodule "05-pipes-app"]
+	path = 05-pipes-app
+	url = https://github.com/bemh1997/pipes-app.git
+	branch = seccion12

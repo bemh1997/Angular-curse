@@ -6,7 +6,7 @@ Repositorio del **Curso de Angular** enfocado en fundamentos sólidos de TypeScr
 
 Este repositorio es una guía completa para aprender Angular desde cero, comenzando con los fundamentos esenciales de TypeScript. Incluye módulos temáticos con código fuente, ejemplos interactivos y prácticas recomendadas para desarrollo profesional.
 
-**Estado actual:** Las secciones 4 a 9 están completadas y organizadas como ramas en sus aplicaciones. La Sección 10 continúa CountryApp para conectarla con datos y completar su funcionamiento.
+**Estado actual:** Las secciones 4 a 11 están completadas. La Sección 12 comienza una aplicación independiente para practicar los Pipes de Angular.
 
 ## 📂 Estructura del Proyecto
 
@@ -16,22 +16,24 @@ Angular-curse/
 ├── 02-base/                      # Submódulo: Angular Essentials
 ├── 03-gifs-app/                  # Submódulo: GifsApp
 ├── 04-country-app/               # Submódulo: CountryApp
+├── 05-pipes-app/                 # Submódulo: PipesApp
 └── .gitignore
 ```
 
-Las aplicaciones Angular viven en repositorios independientes y se incluyen aquí como submódulos. Cada sección tiene una rama propia y `master` apunta a la versión final más reciente de la aplicación:
+Las aplicaciones Angular viven en repositorios independientes y se incluyen aquí como submódulos. Cada sección tiene una rama propia:
 
-| Submódulo | Repositorio | Ramas de sección | `master` |
+| Submódulo | Repositorio | Ramas de sección | Rama principal |
 | --- | --- | --- | --- |
 | [`02-base/`](./02-base/) | [base-app](https://github.com/bemh1997/base-app) | `seccion4`, `seccion5` | Sección 5 |
 | [`03-gifs-app/`](./03-gifs-app/) | [gifs-app](https://github.com/bemh1997/gifs-app) | `seccion6`, `seccion7`, `seccion8` | Sección 8 |
-| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9`, `seccion10` | Sección 9 |
+| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9`, `seccion10`, `seccion11` | Sección 10 |
+| [`05-pipes-app/`](./05-pipes-app/) | [pipes-app](https://github.com/bemh1997/pipes-app) | `seccion12` | Base de PipesApp |
 
 Para trabajar con una etapa anterior, cambia a su rama dentro del submódulo correspondiente. La carpeta `01-typescript-intro/` permanece independiente y no forma parte de estos submódulos.
 
 ### ¿Qué es un submódulo?
 
-Un submódulo es otro repositorio Git incluido dentro de este proyecto. Por eso, `04-country-app/` tiene su propio historial y ramas; el repositorio del curso guarda un enlace a un commit concreto de CountryApp, no una copia de todos sus archivos. Esto permite trabajar y publicar cada aplicación por separado.
+Un submódulo es otro repositorio Git incluido dentro de este proyecto. Por eso, cada aplicación (por ejemplo, `04-country-app/` o `05-pipes-app/`) tiene su propio historial y ramas; el repositorio del curso guarda un enlace a un commit concreto, no una copia de todos sus archivos. Esto permite trabajar y publicar cada aplicación por separado.
 
 Al clonar el curso por primera vez, descarga también los submódulos:
 
@@ -41,13 +43,13 @@ git clone --recurse-submodules https://github.com/bemh1997/Angular-curse.git
 
 Si ya tienes el curso clonado, puedes inicializarlos con `git submodule update --init --recursive`.
 
-Para empezar la Sección 10:
+Para empezar la Sección 12:
 
 ```bash
-git -C 04-country-app switch seccion10
+git -C 05-pipes-app switch seccion12
 ```
 
-Los cambios de la aplicación se confirman y se suben desde `04-country-app/`. Después se confirma en el repositorio del curso el nuevo enlace al commit del submódulo.
+Los cambios de PipesApp se confirman y se suben desde `05-pipes-app/`. Después se confirma en el repositorio del curso el nuevo enlace al commit del submódulo.
 
 ## 📚 Progreso del Curso
 
@@ -62,9 +64,11 @@ Los cambios de la aplicación se confirman y se suben desde `04-country-app/`. D
 - [x] **Sección 7:** Consumo y gestión de GIFs desde una API — rama [`seccion7`](https://github.com/bemh1997/gifs-app/tree/seccion7) de [`03-gifs-app/`](./03-gifs-app/)
 - [x] **Sección 8 (opcional):** GifsApp intermedio/avanzado — rama [`seccion8`](https://github.com/bemh1997/gifs-app/tree/seccion8) de [`03-gifs-app/`](./03-gifs-app/)
 - [x] **Sección 9:** Estructura de CountryApp con routing por funcionalidades — rama [`seccion9`](https://github.com/bemh1997/country-app/tree/seccion9) de [`04-country-app/`](./04-country-app/)
+- [x] **Sección 10:** Hacer funcionar CountryApp consultando datos con los recursos y servicios de Angular  — rama [`seccion10`](https://github.com/bemh1997/country-app/tree/seccion10) de [`04-country-app/`](./04-country-app/)
+- [x] **Sección 11:** Búsquedas y optimizaciones de CountryApp con caché, router, query parameters y debounce — rama [`seccion11`](https://github.com/bemh1997/country-app/tree/seccion11) de [`04-country-app/`](./04-country-app/)
 
 ### 🔄 Siguiente Sección
-- [ ] **Sección 10:** Hacer funcionar CountryApp consultando datos con los recursos y servicios de Angular.
+- [ ] **Sección 12:** Transformar y presentar datos con Pipes de Angular — rama [`seccion12`](https://github.com/bemh1997/pipes-app/tree/seccion12) de [`05-pipes-app/`](./05-pipes-app/)
 
 ### 🔧 Conceptos Implementados - Sección 3
 
@@ -158,9 +162,9 @@ La Sección 9 prepara CountryApp con la navegación y la estructura visual que s
 - **Archivo de rutas por feature o módulo**
 - **Carga perezosa de módulos de rutas**
 
-### 🚧 Sección 10
+### 🔧 Conceptos implementados - Sección 10
 
-El objetivo es conectar CountryApp con datos y hacer funcionar la aplicación. Se trabajará con:
+CountryApp consulta datos y presenta resultados utilizando:
 
 - **Resources** y **`rxResource`**
 - **Signals** y servicios
@@ -168,6 +172,35 @@ El objetivo es conectar CountryApp con datos y hacer funcionar la aplicación. S
 - **Peticiones HTTP**
 - **Operadores de RxJS**
 - Otros conceptos necesarios para completar la aplicación
+
+### 🔧 Conceptos Implementados - Sección 11
+
+Esta sección amplía CountryApp con búsquedas y mejoras de navegación y rendimiento (código en [`04-country-app/`](./04-country-app/), rama `seccion11`):
+
+- **Caché en memoria** para reutilizar resultados y reducir peticiones repetidas.
+- **Router y query parameters** para sincronizar búsquedas y filtros con la URL.
+- **Debounce** para agrupar cambios de búsqueda y evitar peticiones innecesarias.
+
+### 🚧 Sección 12: Pipes de Angular
+
+La sección se desarrolla en una aplicación independiente: [`05-pipes-app/`](./05-pipes-app/), rama `seccion12`.
+
+En esta sección aprenderemos a transformar y presentar valores en las plantillas:
+
+1. `DatePipe`
+2. `UpperCasePipe`
+3. `LowerCasePipe`
+4. `TitleCasePipe`
+5. `CurrencyPipe`
+6. `DecimalPipe`
+7. `PercentPipe`
+8. `I18nPluralPipe`
+9. `I18nSelectPipe`
+10. `JsonPipe`
+11. `KeyValuePipe`
+12. `SlicePipe`
+13. `AsyncPipe`
+14. Configuración de internacionalización de Pipes y de la aplicación
 
 ## 🚀 Requisitos Previos
 
@@ -210,7 +243,12 @@ pnpm install
 
 cd ../04-country-app
 pnpm install
+
+cd ../05-pipes-app
+pnpm install
 ```
+
+`05-pipes-app/` también admite npm: `npm install` y `npm start`.
 
 Las ramas de sección son distintas etapas de la misma aplicación. Para revisar una rama anterior, cámbiala dentro del submódulo, por ejemplo: `git -C 03-gifs-app switch seccion7`. Para volver a la versión final, usa `git -C 03-gifs-app switch master`.
 

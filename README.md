@@ -22,12 +22,12 @@ Angular-curse/
 
 Las aplicaciones Angular viven en repositorios independientes y se incluyen aquí como submódulos. Cada sección tiene una rama propia:
 
-| Submódulo | Repositorio | Ramas de sección | Rama principal |
-| --- | --- | --- | --- |
-| [`02-base/`](./02-base/) | [base-app](https://github.com/bemh1997/base-app) | `seccion4`, `seccion5` | Sección 5 |
-| [`03-gifs-app/`](./03-gifs-app/) | [gifs-app](https://github.com/bemh1997/gifs-app) | `seccion6`, `seccion7`, `seccion8` | Sección 8 |
-| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9`, `seccion10`, `seccion11` | Sección 10 |
-| [`05-pipes-app/`](./05-pipes-app/) | [pipes-app](https://github.com/bemh1997/pipes-app) | `seccion12` | Base de PipesApp |
+| Submódulo | Repositorio | Ramas de sección |
+| --- | --- | --- |
+| [`02-base/`](./02-base/) | [base-app](https://github.com/bemh1997/base-app) | `seccion4`, `seccion5` | 
+| [`03-gifs-app/`](./03-gifs-app/) | [gifs-app](https://github.com/bemh1997/gifs-app) | `seccion6`, `seccion7`, `seccion8` | 
+| [`04-country-app/`](./04-country-app/) | [country-app](https://github.com/bemh1997/country-app) | `seccion9`, `seccion10`, `seccion11` | 
+| [`05-pipes-app/`](./05-pipes-app/) | [pipes-app](https://github.com/bemh1997/pipes-app) | `seccion12`, `seccion13` | 
 
 Para trabajar con una etapa anterior, cambia a su rama dentro del submódulo correspondiente. La carpeta `01-typescript-intro/` permanece independiente y no forma parte de estos submódulos.
 
@@ -40,16 +40,6 @@ Al clonar el curso por primera vez, descarga también los submódulos:
 ```bash
 git clone --recurse-submodules https://github.com/bemh1997/Angular-curse.git
 ```
-
-Si ya tienes el curso clonado, puedes inicializarlos con `git submodule update --init --recursive`.
-
-Para empezar la Sección 12:
-
-```bash
-git -C 05-pipes-app switch seccion12
-```
-
-Los cambios de PipesApp se confirman y se suben desde `05-pipes-app/`. Después se confirma en el repositorio del curso el nuevo enlace al commit del submódulo.
 
 ## 📚 Progreso del Curso
 
@@ -66,9 +56,11 @@ Los cambios de PipesApp se confirman y se suben desde `05-pipes-app/`. Después 
 - [x] **Sección 9:** Estructura de CountryApp con routing por funcionalidades — rama [`seccion9`](https://github.com/bemh1997/country-app/tree/seccion9) de [`04-country-app/`](./04-country-app/)
 - [x] **Sección 10:** Hacer funcionar CountryApp consultando datos con los recursos y servicios de Angular  — rama [`seccion10`](https://github.com/bemh1997/country-app/tree/seccion10) de [`04-country-app/`](./04-country-app/)
 - [x] **Sección 11:** Búsquedas y optimizaciones de CountryApp con caché, router, query parameters y debounce — rama [`seccion11`](https://github.com/bemh1997/country-app/tree/seccion11) de [`04-country-app/`](./04-country-app/)
+- [x] **Sección 12:** Transformar y presentar datos con Pipes de Angular — rama [`seccion12`](https://github.com/bemh1997/pipes-app/tree/seccion12) de [`05-pipes-app/`](./05-pipes-app/)
+- [x] **Sección 13:** Crear pipes personalizados para utilizar información transformada — rama [`seccion13`](https://github.com/bemh1997/pipes-app/tree/seccion13) de [`05-pipes-app/`](./05-pipes-app/)
 
 ### 🔄 Siguiente Sección
-- [ ] **Sección 12:** Transformar y presentar datos con Pipes de Angular — rama [`seccion12`](https://github.com/bemh1997/pipes-app/tree/seccion12) de [`05-pipes-app/`](./05-pipes-app/)
+- [ ] **Sección 14:** Crear y utilizar los formularios reactivos de Angular — rama [`seccion12`](https://github.com/bemh1997/pipes-app/tree/seccion12) de [`06-forms-app/`](./06-forms-app/)
 
 ### 🔧 Conceptos Implementados - Sección 3
 
@@ -181,26 +173,38 @@ Esta sección amplía CountryApp con búsquedas y mejoras de navegación y rendi
 - **Router y query parameters** para sincronizar búsquedas y filtros con la URL.
 - **Debounce** para agrupar cambios de búsqueda y evitar peticiones innecesarias.
 
-### 🚧 Sección 12: Pipes de Angular
+### 🔧 Conceptos Implementados - Sección 12
 
 La sección se desarrolla en una aplicación independiente: [`05-pipes-app/`](./05-pipes-app/), rama `seccion12`.
 
-En esta sección aprenderemos a transformar y presentar valores en las plantillas:
+- En esta sección aprenderemos a transformar y presentar valores en las plantillas con los siguientes pipes: `DatePipe`, `UpperCasePipe`, `LowerCasePipe`, `TitleCasePipe`, `CurrencyPipe`, `DecimalPipe`, `PercentPipe`, `I18nPluralPipe`, `I18nSelectPipe`, `JsonPipe`, `KeyValuePipe`, `SlicePipe`, `A1syncPipe`.
+- Configuración de internacionalización de Pipes y de la aplicación
 
-1. `DatePipe`
-2. `UpperCasePipe`
-3. `LowerCasePipe`
-4. `TitleCasePipe`
-5. `CurrencyPipe`
-6. `DecimalPipe`
-7. `PercentPipe`
-8. `I18nPluralPipe`
-9. `I18nSelectPipe`
-10. `JsonPipe`
-11. `KeyValuePipe`
-12. `SlicePipe`
-13. `AsyncPipe`
-14. Configuración de internacionalización de Pipes y de la aplicación
+### 🔧 Conceptos Implementados - Sección 13
+La sección se desarrolla en una aplicación pipes app y profundiza en los temas personalizados de pipes: [`05-pipes-app/`](./05-pipes-app/), rama `seccion13`.
+
+En esta sección creamos pipes personalizados para aprender a utilizar en diferentes xontextos.
+Puntualmente se crearon: 
+	1. Pipes para transformar strings.
+	2. Pipes dentro de propiedades computadas.
+	3. Pipes para filtrar arreglos.
+	4. Pipes para ordenar arreglos.
+
+Al final da como resultado una tabla dinámica basada en pipes.
+
+### 🔧 Conceptos Implementados - Sección 14
+La sección se desarrolla en la aplicación de Formularios app donde la empieza y desarrolla para integrar los conceptos. (código en [`06-forms-app/`](./06-forms-app/), rama `seccion14`).
+
+En esta sección se trabaja con fomrularios reactivos de Angular, los cuales nos permiten poder tener el control completo de los mismos sin necesidad de paquetes de terceros. Conceptos impartidos:
+
+- **Reactive Forms Moudule** en Standalone compoennts.
+- **Form Builder, Form Controls, Form Arrays**
+- **Controles dinámicos**
+- **Formularios reactivos, campos reactivos** fuera de formularios.
+- **NgSubmit**
+- **Clases utilitarias**
+- **Validaciones básicas prefabricadas**
+
 
 ## 🚀 Requisitos Previos
 
@@ -248,11 +252,9 @@ cd ../05-pipes-app
 pnpm install
 ```
 
-`05-pipes-app/` también admite npm: `npm install` y `npm start`.
-
 Las ramas de sección son distintas etapas de la misma aplicación. Para revisar una rama anterior, cámbiala dentro del submódulo, por ejemplo: `git -C 03-gifs-app switch seccion7`. Para volver a la versión final, usa `git -C 03-gifs-app switch master`.
 
-Para ejecutar GifsApp, configura `GIPHY_API_KEY` en el archivo `.env` de `03-gifs-app/`, usando `.env.example` como plantilla.
+Para ejecutar alguna aplicación que necesite `apí keys`, configura `API_KEY` en el archivo `.env`, usando `.env.example` como plantilla.
 
 ## 🛠️ Cómo Usar
 
@@ -329,5 +331,5 @@ Este proyecto es de fines educativos. Consulta la licencia del curso para más d
 
 ---
 
-- **Última actualización:** Octubre 2026
-- **Estado:** Secciones 4 a 8 disponibles en sus ramas; Sección 9 en desarrollo.
+- **Última actualización:** Noviembre 2026
+- **Estado:** Secciones 1 a 13 disponibles en sus ramas; Sección 14 en desarrollo.

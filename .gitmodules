@@ -14,3 +14,6 @@
 	path = 05-pipes-app
 	url = https://github.com/bemh1997/pipes-app.git
 	branch = seccion12
+[submodule "06-forms-app"]
+	path = 06-forms-app
+	url = https://github.com/bemh1997/forms-app.git
